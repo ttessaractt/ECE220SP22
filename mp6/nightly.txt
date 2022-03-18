@@ -1,0 +1,27 @@
+Compilation Results:
+********************
+updateBoard.c: In function ‘updateBoard’:
+updateBoard.c:119:1: warning: ‘return’ with a value, in function returning void [enabled by default]
+ return board[l]; // return the board
+ ^
+updateBoard.c: In function ‘updateBoard’:
+updateBoard.c:119:1: warning: ‘return’ with a value, in function returning void [enabled by default]
+ return board[l]; // return the board
+ ^
+
+******Testing mp6******
+******Test 0******
+countLiveNeighbor test passed
+updateBoard test passed
+aliveStable test passed
+******Test 1******
+countLiveNeighbor test passed
+updateBoard test passed
+aliveStable test passed
+
+Pass the nightly test!!!
+This nightly test is focusing on compilation error not functionality test.
+This nightly report only tests on the released testcases.
+There are many hidden edge testcase for the MP. Please test it yourselve.
+HIGHLY RECOMMEND YOU TO START YOUR MP EARLY!!!!!!!
+Timestamp: 2022-03-11_00:24:29
