@@ -1,34 +1,21 @@
 Compilation Results:
 ********************
-sparsemat.c: In function ‘add_tuples’:
-sparsemat.c:43:9: error: ‘retmat’ undeclared (first use in this function)
-  return retmat;
-         ^
-sparsemat.c:43:9: note: each undeclared identifier is reported only once for each function it appears in
-sparsemat.c: In function ‘mult_tuples’:
-sparsemat.c:49:12: error: ‘retmat’ undeclared (first use in this function)
-     return retmat;
-            ^
-sparsemat.c: In function ‘add_tuples’:
-sparsemat.c:44:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-sparsemat.c: In function ‘mult_tuples’:
-sparsemat.c:51:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [sparsemat.o] Error 1
 
 load_tuples test: 10 pts total
+Test 1: load tuple
++5: load_tuples: m,n,nnz match
++5: load_tuples: nodes match
 
 gv_tuples test: 6 pts total
 
 set_tuples test: 6 pts 
+Test 3-0: set
+values in node does not match
 
-0
+10
 Failed the nightly test.
 This nightly test is focusing on compilation error not functionality test.
 This nightly report only tests on the released testcases.
 There are many hidden edge testcase for the MP. Please test it yourselve.
 HIGHLY RECOMMEND YOU TO START YOUR MP EARLY!!!!!!!
-Timestamp: 2022-04-14_18:36:31
+Timestamp: 2022-04-15_00:24:41
