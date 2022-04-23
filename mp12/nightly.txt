@@ -1,5 +1,17 @@
 Compilation Results:
 ********************
+In file included from main.cpp:3:0:
+shape.hpp: In member function ‘std::string Shape::getName()’:
+shape.hpp:27:2: error: no return statement in function returning non-void [-Werror=return-type]
+  }
+  ^
+cc1plus: all warnings being treated as errors
+shape.hpp: In member function ‘std::string Shape::getName()’:
+shape.hpp:27:2: error: no return statement in function returning non-void [-Werror=return-type]
+  }
+  ^
+cc1plus: all warnings being treated as errors
+make: *** [student] Error 1
  
 
  ------------------- Begin Verifying MP12 ---------------------
@@ -7,10 +19,36 @@ Shape::getName incorrect
 Rectangle::getArea() incorrect 
 Rectangle::operator + incorrect 
 Rectangle::operator - incorrect 
+Circle::getArea() incorrect 
+Circle::operator + incorrect 
+Circle::operator - incorrect 
+Sphere::getArea() incorrect 
+Sphere::getVolume() incorrect 
+Sphere::operator + incorrect 
+Sphere::operator - incorrect 
+RectPrism::getArea() incorrect 
+RectPrism::getVolume() incorrect 
+RectPrism::operator + incorrect 
+RectPrism::operator - incorrect 
+Maxarea() or constructors are incorrect
+MaxVolume() or Constructors are incorrect
+CreateShape incorrect
+getName() 0/6
+Rectangle: 4/16
+Circle: 4/16
+Sphere: 0/16
+RectPrism: 0/16
+MaxArea(): 0/10
+MaxVolume(): 0/10
+CreateShape() 0/10
+Your total Score for MP12: 8/100
+-------------------- End Verifying MP12 ----------------------
+
+
 
 Failed the nightly test.
 This nightly test is focusing on compilation error not functionality test.
 This nightly report only tests on the released testcases.
 There are many hidden edge testcase for the MP. Please test it yourselve.
 HIGHLY RECOMMEND YOU TO START YOUR MP EARLY!!!!!!!
-Timestamp: 2022-04-23_01:52:51
+Timestamp: 2022-04-23_03:11:33
