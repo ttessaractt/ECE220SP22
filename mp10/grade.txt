@@ -1,0 +1,103 @@
+Compilation Results:
+********************
+
+load_tuples test: 10 pts total
+Test 1: load tuple
++5: load_tuples: m,n,nnz match
++5: load_tuples: nodes match
+
+gv_tuples test: 6 pts total
+
+set_tuples test: 44 pts total
+Test 3-0: set
+values in node does not match
+Test 3-1: set
++6: set_tuples: add node at head
+Test 3-2: set
++6: set_tuples: add node in the middle
+Test 3-3: set
++6: set_tuples: add node at tail
+Test 3-4: set
+values in node does not match
+Test 3-5: set
+values in node does not match
+
+add_tuples test: 15 pts total
+Test 4: add
+ +15: add_tuples pass
+
+save_tuples test: 10 pts total
+Test 6: save
+testing save_tuples, saving to save_test_tuples.txt
+0 5 -0.032200 
+0 9 -0.683400 
+1 8 -0.115000 
+4 1 -0.829100 
+4 4 -0.935900 
+4 5 1.028600 
+5 2 0.537000 
+8 8 -0.354200 
+9 11 -0.926600 
+15 4 -1.372400 
+16 4 0.101200 
+17 5 -0.232100 
+19 7 -0.528200 
+23 3 0.241400 
+24 11 0.683300 
+27 9 -1.470500 
+28 8 -1.136400 
+29 3 0.472300 
+30 3 -0.025900 
+30 11 0.022000 
+
+Printing diff of save tuples. If empty, 10 pts
+diff: grade/save_test_tuples.txt: No such file or directory
+
+0
+destroy_tuples test: 5 pts total
+Printing valgrind output. If no memory leaks/errors, 5 pts
+==104010== Memcheck, a memory error detector
+==104010== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==104010== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==104010== Command: ./test0 7
+==104010== 
+==104010== Invalid read of size 8
+==104010==    at 0x401FBB: add (sparsemat.c:272)
+==104010==    by 0x402119: add_tuples (sparsemat.c:313)
+==104010==    by 0x401491: main (test0.c:456)
+==104010==  Address 0x10 is not stack'd, malloc'd or (recently) free'd
+==104010== 
+==104010== 
+==104010== Process terminating with default action of signal 11 (SIGSEGV)
+==104010==  Access not within mapped region at address 0x10
+==104010==    at 0x401FBB: add (sparsemat.c:272)
+==104010==    by 0x402119: add_tuples (sparsemat.c:313)
+==104010==    by 0x401491: main (test0.c:456)
+==104010==  If you believe this happened as a result of a stack
+==104010==  overflow in your program's main thread (unlikely but
+==104010==  possible), you can try to increase the size of the
+==104010==  main thread stack using the --main-stacksize= flag.
+==104010==  The main thread stack size used in this run was 8388608.
+==104010== 
+==104010== HEAP SUMMARY:
+==104010==     in use at exit: 1,512 bytes in 63 blocks
+==104010==   total heap usage: 85 allocs, 22 frees, 3,128 bytes allocated
+==104010== 
+==104010== LEAK SUMMARY:
+==104010==    definitely lost: 0 bytes in 0 blocks
+==104010==    indirectly lost: 0 bytes in 0 blocks
+==104010==      possibly lost: 0 bytes in 0 blocks
+==104010==    still reachable: 1,512 bytes in 63 blocks
+==104010==         suppressed: 0 bytes in 0 blocks
+==104010== Rerun with --leak-check=full to see details of leaked memory
+==104010== 
+==104010== For lists of detected and suppressed errors, rerun with: -s
+==104010== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+
+Grade:
+******
+Late submission: 0
+Functionality: 43
+Comments and Style: 5
+Intro paragraph: 0
+Total: 48
